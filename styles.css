@@ -192,7 +192,7 @@ body {
 
 .cart-thumb {
   aspect-ratio: 1;
-  background: #fff6bf;
+  background: #fff;
   border: 1px solid rgba(21, 21, 21, 0.1);
   border-radius: 14px;
   display: grid;
@@ -201,9 +201,9 @@ body {
 }
 
 .cart-thumb img {
-  height: 74%;
-  object-fit: contain;
-  width: 74%;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
 }
 
 .cart-line {
@@ -247,6 +247,7 @@ body {
 
 .cart-price-block {
   justify-self: end;
+  position: relative;
   text-align: right;
 }
 
@@ -376,6 +377,44 @@ body {
   padding-top: 0.75rem;
 }
 
+.hover-cursor {
+  animation: hoverCursorMove 1.4s cubic-bezier(0.22, 1, 0.36, 1) alternate infinite;
+  display: block;
+  pointer-events: none;
+  position: absolute;
+  right: -0.8rem;
+  top: 4.1rem;
+  transform: rotate(-10deg);
+  z-index: 8;
+  will-change: transform;
+}
+
+@keyframes hoverCursorMove {
+  0% {
+    transform: translate3d(4.8rem, 3.7rem, 0) rotate(-7deg) scale(0.96);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-10deg) scale(1);
+  }
+}
+
+.hover-cursor__icon {
+  display: block;
+  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.18));
+  height: 2.5rem;
+  overflow: visible;
+  width: 2.5rem;
+}
+
+.hover-cursor__outline {
+  fill: #111;
+}
+
+.hover-cursor__fill {
+  fill: #111;
+}
+
 .section-pad {
   padding: clamp(4rem, 8vw, 7rem) 0;
 }
@@ -496,6 +535,19 @@ code {
   color: rgba(21, 21, 21, 0.72);
 }
 
+.privacy-storage-term {
+  border-bottom: 1px dotted rgba(21, 21, 21, 0.55);
+  color: var(--tl-ink);
+  cursor: help;
+  font-weight: 700;
+}
+
+.privacy-storage-term:focus-visible {
+  border-radius: 4px;
+  outline: 3px solid rgba(52, 131, 250, 0.28);
+  outline-offset: 3px;
+}
+
 .final-cta {
   padding: clamp(4rem, 8vw, 7rem) 0;
 }
@@ -612,6 +664,11 @@ code {
   .price-tooltip {
     left: -70px;
     min-width: min(270px, calc(100vw - 4rem));
+  }
+
+  .hover-cursor {
+    right: 0.25rem;
+    top: 4.35rem;
   }
 
   .step {

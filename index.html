@@ -133,8 +133,8 @@
                                     <div class="cart-grid demo-cart-item">
                                         <div class="cart-thumb">
                                             <img
-                                                src="assets/trackeolibre-logo.png"
-                                                alt=""
+                                                src="assets/headphones.jpg"
+                                                alt="Auriculares Bluetooth negros"
                                             />
                                         </div>
                                         <div class="cart-product">
@@ -202,6 +202,24 @@
                                                     >
                                                 </span>
                                             </button>
+                                            <span
+                                                class="hover-cursor"
+                                                aria-hidden="true"
+                                            >
+                                                <svg
+                                                    viewBox="0 0 32 32"
+                                                    class="hover-cursor__icon"
+                                                >
+                                                    <path
+                                                        class="hover-cursor__outline"
+                                                        d="M5 3.8V25.2L10.9 19.7L14.6 28.4L19.2 26.4L15.5 17.8H24.2L5 3.8Z"
+                                                    />
+                                                    <path
+                                                        class="hover-cursor__fill"
+                                                        d="M7 8V20.6L11.6 16.3L15.3 25L16.6 24.4L12.8 15.7H18.1L7 8Z"
+                                                    />
+                                                </svg>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -341,10 +359,16 @@
                         </div>
                         <p class="section-copy mb-0">
                             TrackeoLibre usa
-                            <code>chrome.storage.local</code> para guardar
-                            settings y precios registrados. No necesita cuenta,
-                            servidor propio ni sincronización externa para
-                            funcionar.
+                            <span
+                                class="privacy-storage-term"
+                                tabindex="0"
+                                data-bs-toggle="tooltip"
+                                data-bs-title="chrome.storage.local"
+                                >almacenamiento del navegador</span
+                            >
+                            para guardar settings y precios registrados. No
+                            necesita cuenta, servidor propio ni sincronización
+                            externa para funcionar.
                             <a href="privacy-policy.html"
                                 >Ver política completa</a
                             >.
@@ -386,6 +410,12 @@
             document.querySelectorAll('.js-store-link').forEach((link) => {
                 link.href = CHROME_WEB_STORE_URL;
             });
+
+            document
+                .querySelectorAll('[data-bs-toggle="tooltip"]')
+                .forEach((element) => {
+                    new bootstrap.Tooltip(element);
+                });
         </script>
     </body>
 </html>
