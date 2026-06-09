@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="TrackeoLibre detecta si los productos de tu carrito de MercadoLibre Argentina subieron, bajaron o siguen igual."
+        />
+        <title>TrackeoLibre | Precio real en tu carrito</title>
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@90,500;100,600;110,700;115,800&family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg sticky-top site-nav">
+            <div class="container">
+                <a
+                    class="navbar-brand d-flex align-items-center gap-2"
+                    href="#top"
+                    aria-label="TrackeoLibre inicio"
+                >
+                    <img
+                        src="assets/trackeolibre-logo.png"
+                        alt=""
+                        width="38"
+                        height="38"
+                        class="brand-mark"
+                    />
+                    <span>TrackeoLibre</span>
+                </a>
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNav"
+                    aria-controls="mainNav"
+                    aria-expanded="false"
+                    aria-label="Abrir navegación"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul
+                        class="navbar-nav ms-auto align-items-lg-center gap-lg-2"
+                    >
+                        <li class="nav-item">
+                            <a class="nav-link" href="#muestra">Qué muestra</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#funciona"
+                                >Cómo funciona</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#privacidad"
+                                >Privacidad</a
+                            >
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <a
+                                class="btn btn-dark btn-sm px-3 js-store-link"
+                                href="#"
+                                >Agregar a Chrome</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main id="top">
+            <section class="hero-section">
+                <div class="container">
+                    <div class="row align-items-center g-5">
+                        <div class="col-lg-6">
+                            <div class="eyebrow mb-3">
+                                Extensión Chrome para MercadoLibre Argentina
+                            </div>
+                            <h1 class="hero-title">TrackeoLibre</h1>
+                            <p class="hero-copy mt-4">
+                                Detecta si los productos de tu carrito de
+                                MercadoLibre Argentina subieron, bajaron o
+                                siguen igual.
+                            </p>
+                            <div
+                                class="d-flex flex-column flex-sm-row gap-3 mt-4"
+                            >
+                                <a
+                                    class="btn btn-dark btn-lg px-4 js-store-link"
+                                    href="#"
+                                    >Agregar a Chrome</a
+                                >
+                                <a
+                                    class="btn btn-outline-dark btn-lg px-4"
+                                    href="#funciona"
+                                    >Ver cómo funciona</a
+                                >
+                            </div>
+                            <div class="hero-note mt-4">
+                                Sin cuentas, sin backend, sin alertas
+                                inventadas: compara contra lo que guardó tu
+                                navegador.
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div
+                                class="product-stage"
+                                aria-label="Vista previa de TrackeoLibre en MercadoLibre"
+                            >
+                                <div class="cart-window">
+                                    <div class="window-bar">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="cart-line cart-line-wide"></div>
+                                    <div class="cart-grid">
+                                        <div class="cart-thumb"></div>
+                                        <div>
+                                            <div class="cart-line"></div>
+                                            <div
+                                                class="cart-line cart-line-short"
+                                            ></div>
+                                            <span
+                                                class="price-chip price-chip-up"
+                                                >Subió $ 25.040,08</span
+                                            >
+                                        </div>
+                                        <div class="cart-price">$ 46.999</div>
+                                    </div>
+                                    <img
+                                        src="assets/trackeolibre-tooltip.png"
+                                        alt="Tooltip de TrackeoLibre mostrando precio registrado, precio actual y diferencia."
+                                        class="tooltip-shot"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-pad" id="muestra">
+                <div class="container">
+                    <div class="row align-items-end g-4 mb-4">
+                        <div class="col-lg-7">
+                            <p class="section-kicker">Lo que te muestra</p>
+                            <h2 class="section-title">
+                                Cuatro estados, una decisión más clara.
+                            </h2>
+                        </div>
+                        <div class="col-lg-5">
+                            <p class="section-copy mb-0">
+                                TrackeoLibre agrega señales simples al carrito
+                                para que el cambio real no quede escondido entre
+                                descuentos, tachados y precios nuevos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 g-lg-4">
+                        <div class="col-md-6 col-xl-3">
+                            <article class="signal-card signal-up">
+                                <span class="signal-dot"></span>
+                                <h3>Subió</h3>
+                                <p>
+                                    Marca cuánto aumentó contra el último precio
+                                    registrado.
+                                </p>
+                            </article>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <article class="signal-card signal-down">
+                                <span class="signal-dot"></span>
+                                <h3>Bajó</h3>
+                                <p>
+                                    Te muestra la diferencia cuando el precio
+                                    actual queda por debajo.
+                                </p>
+                            </article>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <article class="signal-card signal-same">
+                                <span class="signal-dot"></span>
+                                <h3>Sin cambios</h3>
+                                <p>
+                                    Confirma que el producto sigue en el mismo
+                                    valor registrado.
+                                </p>
+                            </article>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <article class="signal-card signal-new">
+                                <span class="signal-dot"></span>
+                                <h3>Nuevo seguimiento</h3>
+                                <p>
+                                    Identifica productos que todavía no tenían
+                                    precio guardado.
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-pad process-section" id="funciona">
+                <div class="container">
+                    <div class="row g-5 align-items-center">
+                        <div class="col-lg-5">
+                            <p class="section-kicker">Cómo funciona</p>
+                            <h2 class="section-title">
+                                Nada mágico: snapshots locales y comparación
+                                directa.
+                            </h2>
+                            <p class="section-copy">
+                                La extensión corre sobre el carrito de
+                                MercadoLibre, lee los productos visibles y
+                                compara el precio actual con el último valor que
+                                guardó Chrome en tu equipo.
+                            </p>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="steps">
+                                <div class="step">
+                                    <span>01</span>
+                                    <div>
+                                        <h3>Abre tu carrito</h3>
+                                        <p>
+                                            TrackeoLibre se activa en
+                                            <code
+                                                >mercadolibre.com.ar/gz/cart</code
+                                            >.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <span>02</span>
+                                    <div>
+                                        <h3>Registra el precio</h3>
+                                        <p>
+                                            Guarda un snapshot del producto, su
+                                            URL, moneda, precio y fecha.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <span>03</span>
+                                    <div>
+                                        <h3>Compara la próxima visita</h3>
+                                        <p>
+                                            Si el precio cambió, agrega un badge
+                                            y un tooltip con el detalle.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-pad" id="privacidad">
+                <div class="container">
+                    <div class="privacy-band">
+                        <div>
+                            <p class="section-kicker">Privacidad</p>
+                            <h2 class="section-title">
+                                Tus registros quedan en tu navegador.
+                            </h2>
+                        </div>
+                        <p class="section-copy mb-0">
+                            TrackeoLibre usa
+                            <code>chrome.storage.local</code> para guardar
+                            settings y precios registrados. No necesita cuenta,
+                            servidor propio ni sincronización externa para
+                            funcionar.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="final-cta">
+                <div class="container text-center">
+                    <img
+                        src="assets/trackeolibre-logo.png"
+                        alt=""
+                        width="72"
+                        height="72"
+                        class="brand-mark mb-4"
+                    />
+                    <h2>Que el carrito no te cambie la historia.</h2>
+                    <p>
+                        Instala TrackeoLibre y revisa el precio real antes de
+                        comprar.
+                    </p>
+                    <a class="btn btn-dark btn-lg px-4 js-store-link" href="#"
+                        >Agregar a Chrome</a
+                    >
+                </div>
+            </section>
+        </main>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            // TODO: reemplazar por la URL real de Chrome Web Store antes de publicar.
+            const CHROME_WEB_STORE_URL = '#';
+
+            document.querySelectorAll('.js-store-link').forEach((link) => {
+                link.href = CHROME_WEB_STORE_URL;
+            });
+        </script>
+    </body>
+</html>
