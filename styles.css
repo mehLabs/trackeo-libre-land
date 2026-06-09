@@ -378,7 +378,7 @@ body {
 }
 
 .hover-cursor {
-  animation: hoverCursorMove 1.4s cubic-bezier(0.22, 1, 0.36, 1) alternate infinite;
+  animation: hoverCursorMove 1.4s ease-in-out alternate infinite;
   display: block;
   pointer-events: none;
   position: absolute;
@@ -392,6 +392,14 @@ body {
 @keyframes hoverCursorMove {
   0% {
     transform: translate3d(4.8rem, 3.7rem, 0) rotate(-7deg) scale(0.96);
+  }
+
+  10% {
+    transform: translate3d(4.8rem, 3.7rem, 0) rotate(-7deg) scale(0.96);
+  }
+
+  70% {
+    transform: translate3d(0, 0, 0) rotate(-10deg) scale(1);
   }
 
   100% {
